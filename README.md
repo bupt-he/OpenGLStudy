@@ -1,6 +1,6 @@
 ### 1. 配置NDK和CMAKE引用
 #### 1.1. NDK工程
-    构建NDK工程时候，直接使用AS的构建NDK Project, 然后gradle选择gradle groov. 为了学习尽量先采用java.
+构建NDK工程时候，直接使用AS的构建NDK Project, 然后gradle选择gradle groov. 为了学习尽量先采用java.
 #### 1.2. CMAKE编写
   * **project(\"ndkopenglstudy\")** 要**System.loadLibrary("ndkopenglstudy")** 一致
   * CMAKE编写时候，注意**include_directories**用于引用自定义文件夹中head文件，**file** 用于引入所有需要编译的
