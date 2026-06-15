@@ -5,13 +5,14 @@
 #include "GLRenderContext.h"
 #include "../utils/LogUtils.h"
 #include "../sample/TriangleSample.h"
+#include "../sample/VBOTriangleSample.h"
 
 
 GLRenderContext *GLRenderContext::m_pContext = nullptr;
 //GLRenderContext *m_pContext = nullptr;
 
 GLRenderContext::GLRenderContext() {
-    m_pCurSample = new TriangleSample();
+    m_pCurSample = new VBOTriangleSample();
     m_pBeforeSample = nullptr;
 }
 

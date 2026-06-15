@@ -3,8 +3,6 @@
 //
 
 #include "TriangleSample.h"
-#include "../utils/ShaderUtils.h"
-#include "LogUtils.h"
 
 TriangleSample::TriangleSample() {
     //初始一些参数

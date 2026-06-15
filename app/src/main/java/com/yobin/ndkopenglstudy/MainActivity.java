@@ -46,5 +46,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         render.unInit();
+
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        commonSurfaceView.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        commonSurfaceView.onResume();
     }
 }

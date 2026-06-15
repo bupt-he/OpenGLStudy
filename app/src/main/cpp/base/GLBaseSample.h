@@ -6,6 +6,8 @@
 #define NDKOPENGLSTUDY_GLBASESAMPLE_H
 
 #include "GLES3/gl3.h"
+#include "../utils/ShaderUtils.h"
+#include "../utils/LogUtils.h"
 
 class GLBaseSample{
 public:
@@ -25,7 +27,6 @@ protected:
     GLuint m_ProgramObj;
     GLuint m_VertexShader;
     GLuint m_FragmentShader;
-
 };
 
 #endif //NDKOPENGLSTUDY_GLBASESAMPLE_H
