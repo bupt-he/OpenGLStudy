@@ -33,5 +33,6 @@ public class BasicListActivity extends AppCompatActivity{
     private Pair<String, Integer>[] data = new Pair[]{
             new Pair<>("普通三角形", GLTypeConst.TYPE_TRIANGLE),
             new Pair<>("VBO三角形", GLTypeConst.TYPE_VBO_TRIANGLE),  //其实就是采用了vao vbo来处理buffer
+            new Pair<>("EBO长方形", GLTypeConst.TYPE_EBO_RECTANGLE),  //其实就是采用了vao vbo来处理buffer
     };
 }

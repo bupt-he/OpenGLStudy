@@ -6,9 +6,11 @@
 #include "../utils/LogUtils.h"
 #include "../sample/TriangleSample.h"
 #include "../sample/VBOTriangleSample.h"
+#include "EBORectangleSample.h"
 
 #define TYPE_TRIANGLE  100
 #define TYPE_VBO_TRIANGLE  TYPE_TRIANGLE + 1
+#define TYPE_EBO_RECTANGLE TYPE_TRIANGLE + 2
 
 
 
@@ -74,6 +76,9 @@ void GLRenderContext::SetType(int type) {
             m_pCurSample = new VBOTriangleSample();
             break;
 
+        case TYPE_EBO_RECTANGLE:
+            m_pCurSample = new EBORectangleSample();
+            break;
         default:
             m_pCurSample = nullptr;
     }

@@ -5,4 +5,5 @@ public class GLTypeConst {
 
     public static final int TYPE_TRIANGLE = 100;
     public static final int TYPE_VBO_TRIANGLE = TYPE_TRIANGLE + 1;
+    public static final int TYPE_EBO_RECTANGLE = TYPE_TRIANGLE + 2;
 }
