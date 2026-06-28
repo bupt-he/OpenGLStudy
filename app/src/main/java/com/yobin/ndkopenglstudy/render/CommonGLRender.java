@@ -1,6 +1,7 @@
 package com.yobin.ndkopenglstudy.render;
 
 import android.opengl.GLSurfaceView;
+import android.util.Log;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
@@ -32,6 +33,7 @@ public class CommonGLRender implements GLSurfaceView.Renderer {
     }
 
     public void init() {
+        Log.d("yobin","init........");
         nativeGLRender.native_Init();
     }
 
@@ -42,6 +44,13 @@ public class CommonGLRender implements GLSurfaceView.Renderer {
     ///////////////////////////////////////////////////////////////////////////
     // 新增方法，用于更新相关参数。
     ///////////////////////////////////////////////////////////////////////////
+    ///
+
+    public void setType(int  type){
+        Log.d("yobin","设置的类型：" + type);
+        nativeGLRender.native_SetType(type);
+    }
+
     public void setShader(String vShader,String fShader){ //添加shader
 
     }

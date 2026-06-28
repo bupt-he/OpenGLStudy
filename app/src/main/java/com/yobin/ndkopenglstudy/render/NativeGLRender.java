@@ -15,4 +15,6 @@ public class NativeGLRender {
     public native void native_OnSurfaceChanged(int width, int height);
 
     public native void native_OnDrawFrame();
+
+    public native void native_SetType(int type);
 }

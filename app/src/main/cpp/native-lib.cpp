@@ -34,6 +34,13 @@ JNIEXPORT void JNICALL native_OnDrawFrame(JNIEnv *env, jobject instance) {
     GLRenderContext::GetInstance()->OnDrawFrame();
 }
 
+//使用JNI CALL的方法后，没有添加 jobject instance 出现type设置出问题情况，一定要加上。
+JNIEXPORT void JNICALL native_SetType(JNIEnv *env,jobject instance, jint type){
+
+    LOGCATD("JNICALL native_SetType type = %d" ,type);
+    GLRenderContext::GetInstance()->SetType(type);
+}
+
 #ifdef __cplusplus
 }
 #endif
@@ -44,6 +51,7 @@ static JNINativeMethod g_RenderMethods[] = {
         {"native_OnSurfaceCreated", "()V", (void *) (native_OnSurfaceCreated)},
         {"native_OnSurfaceChanged", "(II)V", (void *) (native_OnSurfaceChanged)},
         {"native_OnDrawFrame", "()V", (void *) (native_OnDrawFrame)},
+        {"native_SetType", "(I)V", (void *) (native_SetType)},
 };
 
 //注册

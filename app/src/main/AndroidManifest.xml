@@ -21,7 +21,11 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".BasicActivity"
+        <activity android:name=".BasicListActivity"
+            android:exported="true"/>
+
+        <activity android:name=".BasicDetailActivity"
+            android:launchMode="singleInstance"
             android:exported="true"/>
     </application>
 

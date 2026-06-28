@@ -7,6 +7,10 @@
 #include "../sample/TriangleSample.h"
 #include "../sample/VBOTriangleSample.h"
 
+#define TYPE_TRIANGLE  100
+#define TYPE_VBO_TRIANGLE  TYPE_TRIANGLE + 1
+
+
 
 GLRenderContext *GLRenderContext::m_pContext = nullptr;
 //GLRenderContext *m_pContext = nullptr;
@@ -58,10 +62,28 @@ void GLRenderContext::OnDrawFrame() {
     }
 }
 
+void GLRenderContext::SetType(int type) {
+    m_pBeforeSample = m_pCurSample;
+    LOGCATE("MyGLRenderContext::SetType 0 m_pBeforeSample = %p", m_pBeforeSample);
+    switch (type) {
+        case TYPE_TRIANGLE:
+            m_pCurSample = new TriangleSample();
+            break;
+
+        case TYPE_VBO_TRIANGLE:
+            m_pCurSample = new VBOTriangleSample();
+            break;
+
+        default:
+            m_pCurSample = nullptr;
+    }
+    LOGCATE("MyGLRenderContext::SetType 0 m_pCurSample = %p", m_pCurSample);
+}
+
 
 //有返回值
 GLRenderContext *GLRenderContext::GetInstance() {
-    LOGCATD("GLRenderContext::GetInstance()");
+    LOGCATD("GLRenderContext::GetInstance()==============");
     if (m_pContext == nullptr) {
         m_pContext = new GLRenderContext();
     }

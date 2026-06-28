@@ -2,18 +2,10 @@ package com.yobin.ndkopenglstudy;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.graphics.RenderNode;
-import android.opengl.GLSurfaceView;
 import android.os.Bundle;
 import android.util.Pair;
-import android.view.ViewGroup;
-import android.view.ViewTreeObserver;
-import android.widget.FrameLayout;
-import android.widget.TextView;
 
 import com.yobin.ndkopenglstudy.databinding.ActivityMainBinding;
-import com.yobin.ndkopenglstudy.render.CommonGLRender;
-import com.yobin.ndkopenglstudy.render.CommonSurfaceView;
 
 public class MainActivity extends AppCompatActivity{
     private ActivityMainBinding binding;
@@ -27,7 +19,7 @@ public class MainActivity extends AppCompatActivity{
     }
 
     private Pair<String, Class>[] data = new Pair[]{
-            new Pair<>("入门篇", BasicActivity.class),
+            new Pair<>("入门篇", BasicListActivity.class),
     };
 
 

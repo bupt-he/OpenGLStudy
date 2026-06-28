@@ -16,6 +16,8 @@ public:
     void OnSurfaceChanged(int width, int height);
     void OnDrawFrame();
 
+    void SetType(int type);
+
     //创建单例模式
     static GLRenderContext* GetInstance();
     static void DestroyInstance();
